@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup - Wildcats Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FFF1B3] min-h-screen flex items-center justify-center p-4">
+    
+    <div class="w-full max-w-md bg-[#FFF7D4] rounded-md shadow-lg">
+        <div class="flex flex-col items-center justify-center p-3">
+            
+            <!-- Form Title -->
+            <h2 class="text-4xl font-extrabold font-serif text-black my-5">
+                LOGIN
+            </h2>
+
+            <!-- Form -->
+            <form class="w-full" method="POST" action="">
+                
+                <!-- Username field -->
+                <div class="w-full flex items-center justify-center mb-2.5">
+                    <div class="relative w-[90%]">
+                        <div class="flex items-center relative">
+                            <!-- Icon -->
+                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                            </svg>
+                            <!-- Input -->
+                            <input 
+                                type="text" 
+                                name="userName"
+                                placeholder="Username" 
+                                class="text-sm font-semibold font-mono w-full p-2.5 pl-10 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#A31800] focus:border-transparent"
+                                required
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Password field -->
+                <div class="w-full flex items-center justify-center mb-2.5">
+                    <div class="relative w-[90%]">
+                        <div class="flex items-center relative">
+                            <!-- Icon -->
+                            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <!-- Input -->
+                            <input 
+                                type="password" 
+                                name="password"
+                                placeholder="Password" 
+                                class="text-sm font-semibold font-mono w-full p-2.5 pl-10 pr-10 rounded-md bg-white border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#A31800] focus:border-transparent"
+                                required
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit buttons -->
+                <div class="flex items-center justify-around w-full mt-5">
+                    <a href="/signup/" class="w-[40%] mb-4 bg-[#BFB58F] text-white p-2 rounded-md transition duration-300 font-medium hover:opacity-90 text-center">
+                        Sign up
+                    </a>
+                    <button 
+                        type="submit"
+                        class="w-[40%] mb-4 bg-[#A31800] hover:bg-[#801300] text-white p-2 rounded-md transition duration-300 font-medium">
+                        Login
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

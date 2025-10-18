@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildcats Marketplace - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen">
+
+<!-- Main Container with Background -->
+<div class="relative w-full min-h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-between bg-[#FFF4CB]"
+>
+
+    <!-- Navbar -->
+    <nav class="w-full sticky top-0 z-50 bg-[#A31800] shadow-md">
+        <div class="flex items-center justify-between px-4 py-3">
+            <!-- Logo/Brand -->
+            <div class="flex items-center">
+                <span class="ml-2 text-xl font-bold text-white">Wildcats Marketplace</span>
+            </div>
+
+            <!-- Navigation Icons -->
+            <div class="flex items-center space-x-4">
+                <!-- Notifications Button -->
+                <button type="button" class="p-2 rounded-full">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                    </svg>
+                </button>
+
+                <!-- Settings Button -->
+                <button type="button" class="p-2 rounded-full">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                </button>
+
+                <!-- Profile Button -->
+                <a href="/auth/login" class="p-2 rounded-full inline-block">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="flex items-center justify-center flex-1 py-6">
+        <div class="flex flex-col justify-top h-full flex-1 max-w-[1000px] min-w-[300px] mx-2">
+
+            <!-- Tab Navigation -->
+            <div class="flex justify-between space-x-4">
+                <a href="/marketplace/"
+                   class="w-1/2 mb-2 pb-[0.5%] font-bold text-xl bg-transparent text-black text-center border-b-4 border-black">
+                    Marketplace
+                </a>
+                <a href="/seller-dashboard/"
+                   class="w-1/2 mb-2 pb-[0.5%] font-bold text-xl bg-transparent text-black text-center border-none">
+                    Seller Dashboard
+                </a>
+            </div>
+
+            <!-- Today's Picks Section -->
+            <div>
+                <div class="flex justify-between items-center mx-1 mb-4">
+                    <h3 class="text-black font-bold text-xl">
+                        Today's Picks
+                    </h3>
+                    <button type="button" class="p-2 hover:bg-gray-100 rounded">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+                    <a href="/product/1/"
+                       class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="aspect-square bg-blue-400"></div>
+                        <div class="p-3">
+                            <h4 class="font-bold text-sm mb-1 truncate">Product Title 1</h4>
+                            <p class="text-[#A31800] font-bold text-lg">₱299.00</p>
+                            <p class="text-gray-500 text-xs">Condition: Excellent</p>
+                        </div>
+                    </a>
+
+                    <a href="/product/2/"
+                       class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="aspect-square bg-green-400"></div>
+                        <div class="p-3">
+                            <h4 class="font-bold text-sm mb-1 truncate">Product Title 2</h4>
+                            <p class="text-[#A31800] font-bold text-lg">₱450.00</p>
+                            <p class="text-gray-500 text-xs">Condition: Good</p>
+                        </div>
+                    </a>
+
+                    <a href="/product/3/"
+                       class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="aspect-square bg-purple-400"></div>
+                        <div class="p-3">
+                            <h4 class="font-bold text-sm mb-1 truncate">Product Title 3</h4>
+                            <p class="text-[#A31800] font-bold text-lg">₱150.00</p>
+                            <p class="text-gray-500 text-xs">Condition: Fair</p>
+                        </div>
+                    </a>
+
+                    <a href="/product/4/"
+                       class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="aspect-square bg-yellow-400"></div>
+                        <div class="p-3">
+                            <h4 class="font-bold text-sm mb-1 truncate">Product Title 4</h4>
+                            <p class="text-[#A31800] font-bold text-lg">₱599.00</p>
+                            <p class="text-gray-500 text-xs">Condition: Excellent</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="flex justify-center bg-[#350800] text-white py-6 mt-8">
+        <div class="flex justify-around max-w-[1060px] w-full px-4 gap-8">
+            <!-- Left Section -->
+            <div class="text-left max-w-[66%]">
+                <h3 class="font-bold text-lg mb-2">Wildcats MarketPlace</h3>
+                <p class="text-md text-justify leading-relaxed">
+                    Wildcats Marketplace is a web-based application developed as a final project
+                    for CSIT321: Software Development. The platform serves as a simulation of
+                    what an online marketplace for students could look like—providing buying,
+                    selling, and sharing features within a campus-focused community.
+                </p>
+                <p class="text-sm text-gray-300 mt-4">
+                    © 2025 Wildcats Marketplace. All rights reserved.
+                </p>
+            </div>
+            <!-- Right Section -->
+            <div class="flex flex-col justify-center max-w-[33%]">
+                <h3 class="font-bold text-lg mb-2">Team Algorhythym</h3>
+                <ul class="flex flex-col items-start justify-center pl-4 text-md list-disc">
+                    <li>John Lyster Tan Arbiol</li>
+                    <li>Rene John Sitoy</li>
+                    <li>Amiel Joshua Peñaflor</li>
+                    <li>John Clyde Perez</li>
+                    <li>Sol Angelo Singson</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

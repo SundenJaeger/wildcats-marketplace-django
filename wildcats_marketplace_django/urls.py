@@ -20,7 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('marketplace.urls')),
-    path('auth/', include('users.urls')),
+    path('api/auth/', include('users.urls')),  # This matches your frontend API_BASE_URL
     path('categories/', include('categories.urls')),
     path('reports/', include('reports.urls')),
     path('verification/', include('verification.urls')),

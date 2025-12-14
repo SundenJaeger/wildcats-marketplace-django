@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
 from django.db import IntegrityError
+from verification.models import VerificationRequest
 from .models import User, Student
 import json
 import secrets
@@ -50,7 +51,11 @@ class RegisterView(View):
 
             # Create student profile
             Student.objects.create(user=user, is_verified=False)
-
+            # for the verification request after signing up
+            VerificationRequest.objects.create(
+                student=user,
+                status='PENDING'
+            )
             # Generate simple token
             token = secrets.token_urlsafe(32)
 
@@ -62,7 +67,8 @@ class RegisterView(View):
                 'username': user.username,
                 'firstName': user.first_name,
                 'lastName': user.last_name,
-                'userType': user.type
+                'userType': user.type,
+                'verificationStatus': 'PENDING'
             }, status=201)
 
         except IntegrityError as e:

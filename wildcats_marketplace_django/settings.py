@@ -96,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'wildcats_marketplace_django',  # Your database name
         'USER': 'root',  # Your MySQL username
-        'PASSWORD': 'MeiBestWoman',  # Your MySQL password
+        'PASSWORD': '#09361869956Qwe',  # Your MySQL password
         'HOST': 'localhost',  # Or your database server IP
         'PORT': '3306',  # MySQL default port
         'OPTIONS': {

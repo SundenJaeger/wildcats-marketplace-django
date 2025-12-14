@@ -23,5 +23,5 @@ urlpatterns = [
     path('api/auth/', include('users.urls')),  # This matches your frontend API_BASE_URL
     path('categories/', include('categories.urls')),
     path('reports/', include('reports.urls')),
-    path('verification/', include('verification.urls')),
+    path('verification-requests/', include('verification.urls')),
 ]

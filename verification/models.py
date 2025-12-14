@@ -18,13 +18,18 @@ class InstructionalRecords(models.Model):
 
 
 class VerificationRequest(models.Model):
-    STATUS_CHOICES = (('pending', 'Pending'), ('approved', 'Approved'), ('rejected', 'Rejected'))
+    STATUS_CHOICES = (
+        ('PENDING', 'Pending'),
+        ('APPROVED', 'Approved'),
+        ('REJECTED', 'Rejected'),
+    )
     verification_id = models.AutoField(primary_key=True)
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pending')
+    student = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='PENDING')
     request_date = models.DateTimeField(auto_now_add=True)
     response_date = models.DateTimeField(null=True, blank=True)
     admin_notes = models.TextField(blank=True)
     rejection_reason = models.TextField(blank=True)
 
-    def __str__(self): return f"Verification #{self.verification_id}"
+    def __str__(self):
+        return f"Verification #{self.verification_id} - {self.student.first_name} {self.student.last_name}"

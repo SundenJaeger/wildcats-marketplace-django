@@ -29,15 +29,3 @@ class ResourceImage(models.Model):
     is_primary = models.BooleanField(default=False)
 
     def __str__(self): return f"Image for {self.resource.title}"
-
-#comments section
-class Comment(models.Model):
-    comment_id = models.AutoField(primary_key=True)
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    resource = models.ForeignKey(Resource, on_delete=models.CASCADE, related_name='comments')
-    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
-    comment_text = models.TextField()
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.student.user.username} on {self.resource.title}'

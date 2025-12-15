@@ -1,6 +1,5 @@
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
 from .models import Category
 import json
 
@@ -105,8 +104,3 @@ def categories_for_students(request):
     ]
 
     return JsonResponse(data, safe=False)
-def active_categories(request):
-    categories = list(
-        Category.objects.filter(is_active=True).values('category_id', 'category_name')
-    )
-    return JsonResponse(categories, safe=False)
